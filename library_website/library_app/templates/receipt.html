@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Seat Booking Receipt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+        .receipt-container {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid #007bff;
+        }
+        .header {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #007bff;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            color: #007bff;
+        }
+        .header p {
+            font-size: 14px;
+            color: #333;
+        }
+        .receipt-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .receipt-table th, .receipt-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 16px;
+        }
+        .receipt-table th {
+            background: #007bff;
+            color: white;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #28a745;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+        .print-btn {
+            margin-top: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .print-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-container">
+        <div class="header">
+            <h1>Library Seat Booking Receipt</h1>
+            <p><strong>Knowledge Nook Library</strong></p>
+        </div>
+
+        <table class="receipt-table">
+            <tr>
+                <th>Field</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td><strong>Name</strong></td>
+                <td>{{ booking.name }}</td>
+            </tr>
+            <tr>
+                <td><strong>Student ID</strong></td>
+                <td>{{ booking.student_id }}</td>
+            </tr>
+            <tr>
+                <td><strong>Phone</strong></td>
+                <td>{{ booking.phone }}</td>
+            </tr>
+            <tr>
+                <td><strong>Aadhar Number</strong></td>
+                <td>{{ booking.aadhar_number }}</td>
+            </tr>
+            <tr>
+                <td><strong>Shift</strong></td>
+                <td class="highlight">{{ booking.shift }}</td>
+            </tr>
+            <tr>
+                <td><strong>Amount Paid</strong></td>
+                <td>₹{{ booking.amount }}</td>
+            </tr>
+            <tr>
+                <td><strong>Booking Date & Time</strong></td>
+                <td>{{ booking.booking_date|date:"d M Y" }} {{ booking.booking_time|time:"h:i A" }}</td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>Please bring this receipt along with all the documents you uploaded when visiting the library.</p>
+            <p>For any queries or changes, please contact us.</p>
+            <p>Address: <strong>Knowledge Nook Library, BMP 16, Prakash Colony, Maulana Azad Nagar, Khagaul, Patna, Bihar 801105</strong></p>
+            <p>Contact: <strong>7903547986, 8102003094</strong></p>
+            <p><strong>Regards,</strong><br>Library Management</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>

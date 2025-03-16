@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Book Your Seat</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book Now</button>
+</form>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const shiftSelect = document.getElementById("id_shift");
+        const amountField = document.getElementById("id_amount");
+
+        const prices = {
+            "Morning": 100.00,
+            "Afternoon": 150.00,
+            "Evening": 200.00
+        };
+
+      
+        shiftSelect.addEventListener("change", function () {
+            let selectedShift = shiftSelect.value;
+            if (selectedShift in prices) {
+                amountField.value = prices[selectedShift].toFixed(2); 
+            }
+        });
+    });
+</script>
+
+{% endblock %}

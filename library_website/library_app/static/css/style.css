@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Navbar Styles */
+nav {
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+/* Content Area */
+div {
+    margin-top: 70px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: #ffcc00;
+    color: #121212;
+    padding: 12px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Forms */
+form {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #292929;
+    color: #e0e0e0;
+}
+input:focus, textarea:focus {
+    outline: 2px solid #ffcc00;
+}
+
+/* Seat Booking Script Styles */
+#id_shift, #id_amount {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #292929;
+    color: #e0e0e0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+    div {
+        margin-top: 100px;
+    }
+}
