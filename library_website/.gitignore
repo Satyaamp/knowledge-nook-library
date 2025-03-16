@@ -1,6 +1,4 @@
-# Ignore profile pictures
-profile_pics/
-aadhar_pics/
+media/
 
 # Ignore all images (optional)
 *.png
