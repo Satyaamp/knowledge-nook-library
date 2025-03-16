@@ -1,0 +1,9 @@
+# Ignore profile pictures
+profile_pics/
+aadhar_pics/
+
+# Ignore all images (optional)
+*.png
+*.jpg
+*.jpeg
+*.gif
